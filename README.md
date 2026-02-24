@@ -1,1 +1,1 @@
-This website is a personal website for Yutao Zhou. This site work as an electric portfolio for Yutao Zhou. All content on this website is the intellectual property of Yutao Zhou. Please do not copy without consent.
+This website is a personal website for Yutao Zhou. This site works as an electronic portfolio for Yutao Zhou. All content on this website is the intellectual property of Yutao Zhou. Please do not copy any content without consent.
