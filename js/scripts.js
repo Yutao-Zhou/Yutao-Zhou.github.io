@@ -59,8 +59,8 @@
 
   // Create timeline
   $('#experience-timeline').each(function () {
-    $this = $(this); // Store reference to this
-    $userContent = $this.children('div'); // user content
+    let $this = $(this); // Store reference to this
+    let $userContent = $this.children('div'); // user content
 
     // Create each timeline block
     $userContent.each(function () {

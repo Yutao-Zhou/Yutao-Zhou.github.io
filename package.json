@@ -4,7 +4,9 @@
   "description": "",
   "main": "js/scripts.js",
   "scripts": {
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "portfolio",
@@ -19,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "babel-jest": "^30.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
@@ -27,6 +31,11 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-wait": "0.0.2",
+    "jest": "^30.3.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^30.3.0",
+    "jquery": "^4.0.0",
+    "jsdom": "^29.0.1",
     "prettier": "^3.8.1"
   }
 }
