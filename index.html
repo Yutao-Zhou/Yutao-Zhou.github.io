@@ -1,874 +1,1293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Yutao Zhou's portfolio: software engineering experience in distributed systems, cloud infrastructure, and full-stack projects.">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Yutao Zhou's portfolio: software engineering experience in distributed systems, cloud infrastructure, and full-stack projects."
+    />
     <title>Yutao Zhou</title>
-	<link rel="shortcut icon" href="images/me.jpeg" type="image/x-icon">
-	<link rel="icon" href="images/me.jpeg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/me.jpeg" type="image/x-icon" />
+    <link rel="icon" href="images/me.jpeg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-            top: 0;
-            z-index: 2000;
-            padding: 10px 14px;
-            background: #fff;
-            color: #0d4f7a;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .skip-link:focus {
-            left: 12px;
-            top: 12px;
-        }
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-        #academic-projects {
-            padding: 50px 15px;
-            border-bottom: 1px solid #dcd9d9;
-            text-align: center;
-        }
-        #academic-projects h2 {
-            color: #374054;
-            margin-bottom: 50px;
-        }
-        #mobile-menu-open,
-        #mobile-menu-close {
-            border: 0;
-        }
-        #lead-down a,
-        #to-top a {
-            color: inherit;
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-        }
-        #mobile-menu-open:focus,
-        #mobile-menu-close:focus,
-        #lead-down a:focus,
-        #to-top a:focus,
-        .social a:focus,
-        #contact a:focus,
-        #contact-form button:focus {
-            outline: 3px solid #0d4f7a;
-            outline-offset: 2px;
-        }
-        .vtimeline-content ul {
-            margin: 0;
-            padding-left: 18px;
-            color: #74808a;
-        }
-        .vtimeline-content li {
-            margin-bottom: 8px;
-        }
-        .project-info ul {
-            margin: 0;
-            padding-left: 18px;
-            color: #74808a;
-            text-align: left;
-        }
-        .project-info li {
-            margin-bottom: 8px;
-        }
-        .contact-list {
-            list-style: none;
-            margin: 0 0 15px 0;
-            padding: 0;
-            color: #fff;
-        }
-        .contact-list li {
-            margin-bottom: 8px;
-        }
-        .contact-list a {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .contact-list a:hover,
-        .contact-list a:focus {
-            color: #eaf6ff;
-        }
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 2000;
+        padding: 10px 14px;
+        background: #fff;
+        color: #0d4f7a;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 12px;
+        top: 12px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      #academic-projects {
+        padding: 50px 15px;
+        border-bottom: 1px solid #dcd9d9;
+        text-align: center;
+      }
+      #academic-projects h2 {
+        color: #374054;
+        margin-bottom: 50px;
+      }
+      #mobile-menu-open,
+      #mobile-menu-close {
+        border: 0;
+      }
+      #lead-down a,
+      #to-top a {
+        color: inherit;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+      #mobile-menu-open:focus,
+      #mobile-menu-close:focus,
+      #lead-down a:focus,
+      #to-top a:focus,
+      .social a:focus,
+      #contact a:focus,
+      #contact-form button:focus {
+        outline: 3px solid #0d4f7a;
+        outline-offset: 2px;
+      }
+      .vtimeline-content ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #74808a;
+      }
+      .vtimeline-content li {
+        margin-bottom: 8px;
+      }
+      .project-info ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #74808a;
+        text-align: left;
+      }
+      .project-info li {
+        margin-bottom: 8px;
+      }
+      .contact-list {
+        list-style: none;
+        margin: 0 0 15px 0;
+        padding: 0;
+        color: #fff;
+      }
+      .contact-list li {
+        margin-bottom: 8px;
+      }
+      .contact-list a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .contact-list a:hover,
+      .contact-list a:focus {
+        color: #eaf6ff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <button id="mobile-menu-open" class="shadow-large" type="button" aria-label="Open navigation menu" aria-controls="menu">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+    <button
+      id="mobile-menu-open"
+      class="shadow-large"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="menu"
+    >
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
     <!-- End #mobile-menu-toggle -->
     <header>
-        <nav aria-label="Primary navigation">
-        <button id="mobile-menu-close" type="button" aria-label="Close navigation menu">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+      <nav aria-label="Primary navigation">
+        <button
+          id="mobile-menu-close"
+          type="button"
+          aria-label="Close navigation menu"
+        >
+          <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </button>
         <ul id="menu" class="shadow">
-            <li>
-                <a href="#skills"><b style="font-size:15px">Skills</b></a>
-            </li>
-            <li>
-                <a href="#about"><b style="font-size:15px">About</b></a>
-            </li>
-            <li>
-                <a href="#experience"><b style="font-size:15px">Experience</b></a>
-            </li>
-            <li>
-                <a href="#education"><b style="font-size:15px">Education</b></a>
-            </li>
-            <li>
-                <a href="#projects"><b style="font-size:15px">Projects</b></a>
-            </li>
-            <li>
-                <a href="#contact"><b style="font-size:15px">Contact</b></a>
-            </li>
+          <li>
+            <a href="#skills"><b style="font-size: 15px">Skills</b></a>
+          </li>
+          <li>
+            <a href="#about"><b style="font-size: 15px">About</b></a>
+          </li>
+          <li>
+            <a href="#experience"><b style="font-size: 15px">Experience</b></a>
+          </li>
+          <li>
+            <a href="#education"><b style="font-size: 15px">Education</b></a>
+          </li>
+          <li>
+            <a href="#projects"><b style="font-size: 15px">Projects</b></a>
+          </li>
+          <li>
+            <a href="#contact"><b style="font-size: 15px">Contact</b></a>
+          </li>
         </ul>
-        </nav>
+      </nav>
     </header>
     <!-- End header -->
     <main id="main-content">
-    <div id="lead">
+      <div id="lead">
         <div id="lead-content">
-            <h1><b style="font-size:50px">Yutao Zhou</b></h1>
-            <h2><b style="font-size:30px">Software Development Engineer II at Amazon</b></h2>
-            <h2><b style="font-size:30px">M.S. at Columbia University</b></h2>
-            <h2><b style="font-size:30px">B.S. at University of California, Santa Barbara</b></h2>
-            <a href="files/Yutao_Zhou_SDE_Resume.pdf" class="btn-rounded-white">Download Resume</a>
+          <h1><b style="font-size: 50px">Yutao Zhou</b></h1>
+          <h2>
+            <b style="font-size: 30px"
+              >Software Development Engineer II at Amazon</b
+            >
+          </h2>
+          <h2><b style="font-size: 30px">M.S. at Columbia University</b></h2>
+          <h2>
+            <b style="font-size: 30px"
+              >B.S. at University of California, Santa Barbara</b
+            >
+          </h2>
+          <a href="files/Yutao_Zhou_SDE_Resume.pdf" class="btn-rounded-white"
+            >Download Resume</a
+          >
         </div>
         <!-- End #lead-content -->
 
         <div id="lead-overlay" aria-hidden="true"></div>
 
         <div id="lead-down">
-            <span>
-                <a href="#skills" aria-label="Scroll to skills section">
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </a>
-            </span>
+          <span>
+            <a href="#skills" aria-label="Scroll to skills section">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+          </span>
         </div>
         <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-    <div id="skills">
+      </div>
+      <!-- End #lead -->
+      <div id="skills">
         <h2 class="heading"><b>SKILLS & PACKAGES</b></h2>
-        <ul>   
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C</li>
-            <li>Spring Boot</li>
-            <li>React.js</li>
-            <li>Django</li>
-            <li>Flask</li>
-            <li>FastAPI</li>
-            <li>REST APIs</li>
-            <li>RESTful Web Services</li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>NoSQL</li>
-            <li>AWS</li>
-            <li>Microservices</li>
-            <li>Kubernetes</li>
-            <li>Docker</li>
-            <li>unittest</li>
-            <li>pytest</li>
-            <li>jtest</li>
-            <li>Unit test</li>
-            <li>Integration test</li>
-            <li>Design review</li>
-            <li>Code review</li>
-            <li>Version Set</li>
-            <li>Pipeline</li>
-            <li>Software development management system</li>
-            <li>Threading</li>
-            <li>asyncio</li>
-            <li>Shell script</li>
-            <li>Git</li>
-            <li>MongoDB</li>
-            <li>Neo4j</li>
-            <li>TypeScript</li>
-            <li>XML</li>
-            <li>Solidity</li>
-            <li>Spark/hadoop</li>
-            <li>Socket Programming</li>
-            <li>Full-Stack Development</li>
-            <li>Google Cloud Platform (GCP)</li>
-            <li>Apache Airflow</li>
-            <li>GraphQL</li>
-            <li>D3.js</li>
-            <li>TensorFlow</li>
-            <li>Database</li>
-            <li>Computer Network</li>
-            <li>Operating System</li>
-            <li>Cloud Computing</li>
-            <li>Deep Learning</li>
-            <li>Reinforcement Learning</li>
-            <li>Big Data Analysis</li>
-            <li>Stream Data Processing</li>
-            <li>Blockchain</li>
-            <li>MATLAB</li>
-            <li>LaTeX</li>
-            <li>Autodesk CAD</li>
-            <li>EasyEDA</li>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>C</li>
+          <li>Spring Boot</li>
+          <li>React.js</li>
+          <li>Django</li>
+          <li>Flask</li>
+          <li>FastAPI</li>
+          <li>REST APIs</li>
+          <li>RESTful Web Services</li>
+          <li>MySQL</li>
+          <li>PostgreSQL</li>
+          <li>NoSQL</li>
+          <li>AWS</li>
+          <li>Microservices</li>
+          <li>Kubernetes</li>
+          <li>Docker</li>
+          <li>unittest</li>
+          <li>pytest</li>
+          <li>jtest</li>
+          <li>Unit test</li>
+          <li>Integration test</li>
+          <li>Design review</li>
+          <li>Code review</li>
+          <li>Version Set</li>
+          <li>Pipeline</li>
+          <li>Software development management system</li>
+          <li>Threading</li>
+          <li>asyncio</li>
+          <li>Shell script</li>
+          <li>Git</li>
+          <li>MongoDB</li>
+          <li>Neo4j</li>
+          <li>TypeScript</li>
+          <li>XML</li>
+          <li>Solidity</li>
+          <li>Spark/hadoop</li>
+          <li>Socket Programming</li>
+          <li>Full-Stack Development</li>
+          <li>Google Cloud Platform (GCP)</li>
+          <li>Apache Airflow</li>
+          <li>GraphQL</li>
+          <li>D3.js</li>
+          <li>TensorFlow</li>
+          <li>Database</li>
+          <li>Computer Network</li>
+          <li>Operating System</li>
+          <li>Cloud Computing</li>
+          <li>Deep Learning</li>
+          <li>Reinforcement Learning</li>
+          <li>Big Data Analysis</li>
+          <li>Stream Data Processing</li>
+          <li>Blockchain</li>
+          <li>MATLAB</li>
+          <li>LaTeX</li>
+          <li>Autodesk CAD</li>
+          <li>EasyEDA</li>
         </ul>
-    </div>
-    <div id="about">
+      </div>
+      <div id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading"><b>ABOUT ME</b></h2>
-                </div>
-                <div class="col-md-8">
-                  <p>
-                    Hi, I'm <strong>Yutao Zhou</strong>, a <strong>Software Development Engineer II at Amazon Web Services (AWS)</strong>,
-                    based in <strong>Silicon Valley</strong>. I help build and scale the <strong>networking workflow platform</strong>
-                    that powers AWS infrastructure and AI systems worldwide. I'm passionate about designing
-                    <strong>reliable, high-performance distributed systems</strong> and solving complex problems with clarity and impact.
-                    I believe great engineering comes from <strong>curiosity, persistence, and empathy</strong> - both in code and in teamwork.
-                  </p>
-                </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="heading"><b>ABOUT ME</b></h2>
             </div>
+            <div class="col-md-8">
+              <p>
+                Hi, I'm <strong>Yutao Zhou</strong>, a
+                <strong
+                  >Software Development Engineer II at Amazon Web Services
+                  (AWS)</strong
+                >, based in <strong>Silicon Valley</strong>. I help build and
+                scale the <strong>networking workflow platform</strong>
+                that powers AWS infrastructure and AI systems worldwide. I'm
+                passionate about designing
+                <strong>reliable, high-performance distributed systems</strong>
+                and solving complex problems with clarity and impact. I believe
+                great engineering comes from
+                <strong>curiosity, persistence, and empathy</strong> - both in
+                code and in teamwork.
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- End #about -->
-    <div id="experience" class="background-alt">
+      </div>
+      <!-- End #about -->
+      <div id="experience" class="background-alt">
         <h2 class="heading"><b>WORK EXPERIENCE</b></h2>
         <div id="experience-timeline">
-            <div data-date="October 2025 - Present">
-                <h3><b>Amazon Web Services</b></h3>
-                <h4>SDE II - Santa Clara, CA</h4>
-                <ul>
-                <li>
-                    Working on a team that changes how Amazon scales up and tears down its data center networks. We help NDEs automate as much of their process as possible, enabling Amazon data center capacity (not only AWS) to be elastic.
-                </li>
-                </ul>
-            </div>
-            <div data-date="February 2024 - September 2025">
-                <h3><b>Amazon Web Services</b></h3>
-                <h4>SDE - Santa Clara, CA</h4>
-                <ul>
-                <li>
-                    Working on a team that changes how Amazon scales up and tears down its data center networks. We help NDEs automate as much of their process as possible, enabling Amazon data center capacity (not only AWS) to be elastic.
-                </li>
-                </ul>
-            </div>
-            <div data-date="May 2023 - August 2023">
-                <h3><b>Amazon Web Services</b></h3>
-                <h4>SDE Intern - Santa Clara, CA</h4>
-                <ul>
-                <li>
-                    Created a smart reboot and host monitoring system that checks the status of our devices globally and reboots eligible devices
-                    with adjustable speeds and settings. Redundant checks on host health (e.g., BMC, VPC status, etc.) and location health are
-                    performed to ensure reboots never impact services, and the system is deployed to 10K+ production devices.
-                </li>
-                <li>
-                    Improved device health and reduced DevOps labor requirements. All hosts were patched or updated every 14 days.
-                </li>
-                <li>
-                    Completed the project entirely independently, covering the full software development lifecycle from design review,
-                    implementation, unit testing, integration testing, code review, and monitoring pipeline setup to production deployment.
-                </li>
-                <li>
-                    Wrote unit tests using the pytest and unittest frameworks for Python packages. Wrote unit tests using jtest for Java packages. Achieved total unit test coverage of more than 85% for my code across more than five different packages written in Python or Java.
-                </li>
-                <li>
-                    Found bugs from other teams and coordinated with their SDEs to fix them. Also fulfilled requests from other teams for shared packages.
-                </li>
-                </ul>
-            </div>
-            <div data-date="February 2022 - May 2022">
-                <h3><b>Deepchem Co., Ltd.</b></h3>
-                <h4>Python Intern - Beijing, China</h4>
-                <ul>
-                <li>
-                    Designed and built a calculation task distribution system that distributed jobs from a distribution server to different calculation servers (group project, four people total, including one manager).
-                </li>
-                <li>
-                    Communicated and collaborated with the front-end team and other coworkers to create a web-based platform. Represented the team in communication with management. Finished building it in one month.
-                </li>
-                <li>
-                    Checked job status on the platform and handled manual stops from users with GET requests. Handled exceptional cases (e.g., the distribution server going offline). Stress-tested all four calculation servers.
-                </li>
-                <li>
-                    Checked front-end job status and submitted calculation logs to the distribution server in real time with GET and POST. Zipped required calculation results and uploaded files to the distribution server with POST (up to 10 jobs in production).
-                </li>
-                <li>
-                    Increased overall calculation efficiency by 50% - 200% (by keeping calculation servers busy during non-business hours).
-                </li>
-                <li>
-                    Created algorithms to find missing datasets in a database from ID-query CSV files, perform data filtering and alignment, and extract 3D Cartesian coordinates and SMILES using the Pybel (OpenBabel) Python package.
-                </li>
-                <li>
-                     Constructed and maintained an SQL database. Extracted data from XYZ and CSV files, converted SMILES, and inserted the results into the SQL database (including duplicate checks) (individual project).
-                </li>
-                <li>
-                    Developed an algorithm to audit two-way connections between a PC and lab equipment automatically with sockets (individual project completed in one day).
-                </li>
-                </ul>
-            </div>
-            <div data-date="June 2019 - January 2022">
+          <div data-date="October 2025 - Present">
+            <h3><b>Amazon Web Services</b></h3>
+            <h4>SDE II - Santa Clara, CA</h4>
+            <ul>
+              <li>
+                Working on a team that changes how Amazon scales up and tears
+                down its data center networks. We help NDEs automate as much of
+                their process as possible, enabling Amazon data center capacity
+                (not only AWS) to be elastic.
+              </li>
+            </ul>
+          </div>
+          <div data-date="February 2024 - September 2025">
+            <h3><b>Amazon Web Services</b></h3>
+            <h4>SDE - Santa Clara, CA</h4>
+            <ul>
+              <li>
+                Working on a team that changes how Amazon scales up and tears
+                down its data center networks. We help NDEs automate as much of
+                their process as possible, enabling Amazon data center capacity
+                (not only AWS) to be elastic.
+              </li>
+            </ul>
+          </div>
+          <div data-date="May 2023 - August 2023">
+            <h3><b>Amazon Web Services</b></h3>
+            <h4>SDE Intern - Santa Clara, CA</h4>
+            <ul>
+              <li>
+                Created a smart reboot and host monitoring system that checks
+                the status of our devices globally and reboots eligible devices
+                with adjustable speeds and settings. Redundant checks on host
+                health (e.g., BMC, VPC status, etc.) and location health are
+                performed to ensure reboots never impact services, and the
+                system is deployed to 10K+ production devices.
+              </li>
+              <li>
+                Improved device health and reduced DevOps labor requirements.
+                All hosts were patched or updated every 14 days.
+              </li>
+              <li>
+                Completed the project entirely independently, covering the full
+                software development lifecycle from design review,
+                implementation, unit testing, integration testing, code review,
+                and monitoring pipeline setup to production deployment.
+              </li>
+              <li>
+                Wrote unit tests using the pytest and unittest frameworks for
+                Python packages. Wrote unit tests using jtest for Java packages.
+                Achieved total unit test coverage of more than 85% for my code
+                across more than five different packages written in Python or
+                Java.
+              </li>
+              <li>
+                Found bugs from other teams and coordinated with their SDEs to
+                fix them. Also fulfilled requests from other teams for shared
+                packages.
+              </li>
+            </ul>
+          </div>
+          <div data-date="February 2022 - May 2022">
+            <h3><b>Deepchem Co., Ltd.</b></h3>
+            <h4>Python Intern - Beijing, China</h4>
+            <ul>
+              <li>
+                Designed and built a calculation task distribution system that
+                distributed jobs from a distribution server to different
+                calculation servers (group project, four people total, including
+                one manager).
+              </li>
+              <li>
+                Communicated and collaborated with the front-end team and other
+                coworkers to create a web-based platform. Represented the team
+                in communication with management. Finished building it in one
+                month.
+              </li>
+              <li>
+                Checked job status on the platform and handled manual stops from
+                users with GET requests. Handled exceptional cases (e.g., the
+                distribution server going offline). Stress-tested all four
+                calculation servers.
+              </li>
+              <li>
+                Checked front-end job status and submitted calculation logs to
+                the distribution server in real time with GET and POST. Zipped
+                required calculation results and uploaded files to the
+                distribution server with POST (up to 10 jobs in production).
+              </li>
+              <li>
+                Increased overall calculation efficiency by 50% - 200% (by
+                keeping calculation servers busy during non-business hours).
+              </li>
+              <li>
+                Created algorithms to find missing datasets in a database from
+                ID-query CSV files, perform data filtering and alignment, and
+                extract 3D Cartesian coordinates and SMILES using the Pybel
+                (OpenBabel) Python package.
+              </li>
+              <li>
+                Constructed and maintained an SQL database. Extracted data from
+                XYZ and CSV files, converted SMILES, and inserted the results
+                into the SQL database (including duplicate checks) (individual
+                project).
+              </li>
+              <li>
+                Developed an algorithm to audit two-way connections between a PC
+                and lab equipment automatically with sockets (individual project
+                completed in one day).
+              </li>
+            </ul>
+          </div>
+          <div data-date="June 2019 - January 2022">
+            <h3>
+              <b
+                >Beijing MeiQuan Science and Technology Development Co., Ltd.</b
+              >
+            </h3>
+            <h4>
+              Part-time Software Engineer and Administrative Assistant - Remote,
+              USA / Beijing, China
+            </h4>
+            <ul>
+              <li>
+                Visualized customer lists on an interactive map.
+                <a
+                  href="https://yutao-zhou.github.io/MQ_customer_visualization/"
+                  >Click here to see the map</a
+                >. Used the Google Maps API for geocoding and saved results to
+                JSON to reduce API quota usage.
+              </li>
+              <li>
+                Read the products' CAD structural drawings and specifications,
+                made optimization suggestions, participated in new product
+                development, and introduced product features to potential
+                clients.
+              </li>
+              <li>
+                Produced promotional materials remotely, such as the company's
+                and products' brochures, using PowerPoint and LaTeX.
+              </li>
+              <li>
+                Discuss project alternatives with the customer including but not
+                limited to problem-solving.
+              </li>
+              <li>Hands-on experience with product production and shipping.</li>
+            </ul>
+          </div>
+          <div data-date="July 2021 - August 2021">
+            <h3>
+              <b
+                >Research Institute of Nanjing Runnan Medical Electronics Co.,
+                Ltd.</b
+              >
+            </h3>
+            <h4>Part-time Assistant - Remote, USA</h4>
+            <ul>
+              <li>
+                Collected clinical data in Python and drew signal waveforms,
+                such as electrocardiograms (ECG), electromechanical film
+                ballistocardiograms (BCG), LC BCG, etc.
+              </li>
+              <li>
+                Identified signal peaks through local maximization, calculated
+                peak distances, and plotted them to extract the beat-by-beat
+                cardiac cycle of ECG signals.
+              </li>
+              <li>
+                Performed extraction of the beat-by-beat cardiac cycle of BCG
+                signals with or without a synchronous ECG signal reference.
+              </li>
+            </ul>
+          </div>
 
-                <h3><b>Beijing MeiQuan Science and Technology Development Co., Ltd.</b></h3>
-                <h4>Part-time Software Engineer and Administrative Assistant - Remote, USA / Beijing, China</h4>
-                <ul>
-                <li>
-                    Visualized customer lists on an interactive map. <a href="https://yutao-zhou.github.io/MQ_customer_visualization/">Click here to see the map</a>. Used the Google Maps API for geocoding and saved results to JSON to reduce API quota usage.
-                </li>
-                <li>
-                    Read the products' CAD structural drawings and specifications, made optimization suggestions, participated in new product development, and introduced product features to potential clients.
-                </li>                
-                <li>
-                    Produced promotional materials remotely, such as the company's and products' brochures, using PowerPoint and LaTeX.
-                </li>
-                <li>
-                    Discuss project alternatives with the customer including but not limited to problem-solving.
-                </li>
-                <li>
-                    Hands-on experience with product production and shipping. 
-                </li>
-                </ul>
-            </div>
-            <div data-date="July 2021 - August 2021">
+          <div data-date="Sep 2020 - Dec 2021">
+            <h3><b>UCSB Physics Circus</b></h3>
+            <h4>Core member - UCSB, Santa Barbara, CA</h4>
+            <ul>
+              <li>
+                Delivered intriguing physics lectures to local elementary
+                schools via Zoom.
+              </li>
+              <li>
+                Co-designed the Balloon Thermal Experiment and created the
+                featured homepage on Home Experiments Website:
+                https://circus.physics.ucsb.edu/home-experiments/
+              </li>
+              <li>
+                Got featured several times in The Current, UCSB's official
+                magazine.
+              </li>
+            </ul>
+          </div>
+          <div data-date="Mar 2020 – Dec 2021">
+            <h3><b>UCSB College of Letters and Science</b></h3>
+            <h4>Academic Peer Advisor - UCSB, Santa Barbara, CA</h4>
+            <ul>
+              <li>
+                Advised peer students on educational plans and provided
+                suggestions on course selection.
+              </li>
+              <li>
+                Managed Qless (a virtual walk-in platform), handled progress
+                checks and petitions, explained paperwork processes and college
+                policies, and addressed student concerns, especially during the
+                pandemic.
+              </li>
+              <li>
+                Managed academic appointments, provided detailed academic plans
+                and progress checks, and explained potential academic actions
+                and consequences.
+              </li>
+            </ul>
+          </div>
 
-                <h3><b>Research Institute of Nanjing Runnan Medical Electronics Co., Ltd.</b></h3>
-                <h4>Part-time Assistant - Remote, USA</h4>
-                <ul>
-                <li>
-                    Collected clinical data in Python and drew signal waveforms, such as electrocardiograms (ECG), electromechanical film ballistocardiograms (BCG), LC BCG, etc.
-                </li>                
-                <li>
-                    Identified signal peaks through local maximization, calculated peak distances, and plotted them to extract the beat-by-beat cardiac cycle of ECG signals.
-                </li>                
-                <li>
-                    Performed extraction of the beat-by-beat cardiac cycle of BCG signals with or without a synchronous ECG signal reference.
-                </li>                
-                </ul>
-            </div>
-
-            <div data-date="Sep 2020 - Dec 2021">
-                <h3><b>UCSB Physics Circus</b></h3>
-                <h4>Core member - UCSB, Santa Barbara, CA</h4>
-                <ul>
-                <li>
-                    Delivered intriguing physics lectures to local elementary schools via Zoom.
-                </li>                
-                <li>
-                    Co-designed the Balloon Thermal Experiment and created the featured homepage on Home Experiments Website: https://circus.physics.ucsb.edu/home-experiments/
-                </li>                
-                <li>
-                    Got featured several times in The Current, UCSB's official magazine.
-                </li>                
-                </ul>
-            </div>
-            <div data-date="Mar 2020 – Dec 2021">
-                <h3><b>UCSB College of Letters and Science</b></h3>
-                <h4>Academic Peer Advisor - UCSB, Santa Barbara, CA</h4>
-                <ul>
-                <li>
-                    Advised peer students on educational plans and provided suggestions on course selection.
-                </li>                
-                <li>
-                    Managed Qless (a virtual walk-in platform), handled progress checks and petitions, explained paperwork processes and college policies, and addressed student concerns, especially during the pandemic.
-                </li>                
-                <li>
-                    Managed academic appointments, provided detailed academic plans and progress checks, and explained potential academic actions and consequences.
-                </li>                
-                </ul>
-            </div>
-
-            <div data-date="August 2018 - August 2018">
-
-                <h3><b>Citibank</b></h3>
-                <h4>YTP Participant - Beijing, China</h4>
-                <ul>
-                <li>
-                    Introduced financial products to new customers and received an award for best customer service.
-                </li>                
-                <li>
-                    Listened to morning reports, learned a great deal of financial knowledge, and gave a presentation about the group project.
-                </li>                                
-                </ul>
-            </div>
+          <div data-date="August 2018 - August 2018">
+            <h3><b>Citibank</b></h3>
+            <h4>YTP Participant - Beijing, China</h4>
+            <ul>
+              <li>
+                Introduced financial products to new customers and received an
+                award for best customer service.
+              </li>
+              <li>
+                Listened to morning reports, learned a great deal of financial
+                knowledge, and gave a presentation about the group project.
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <!-- End #experience -->
-    <div id="education">
+      </div>
+      <!-- End #experience -->
+      <div id="education">
         <h2 class="heading"><b>EDUCATION</b></h2>
         <div class="education-block">
-            <h3><b>Columbia University: Fu Foundation School of Engineering and Applied Science</b></h3>
-            <span class="education-date">New York, NY: Sep 2022 - Dec 2023</span>
-            <h4>Master of Science in Electrical Engineering</h4>
-            <ul>
-                <li>
-                    Overall GPA: 3.8/4.0
-                </li>
-            </ul>
+          <h3>
+            <b
+              >Columbia University: Fu Foundation School of Engineering and
+              Applied Science</b
+            >
+          </h3>
+          <span class="education-date">New York, NY: Sep 2022 - Dec 2023</span>
+          <h4>Master of Science in Electrical Engineering</h4>
+          <ul>
+            <li>Overall GPA: 3.8/4.0</li>
+          </ul>
         </div>
         <div class="education-block">
-            <h3><b>University of California - Santa Barbara: College of Letters and Science</b></h3>
-            <span class="education-date">Santa Barbara, CA: Sep 2018 - Dec 2021</span>
-            <h4>Bachelor of Science in Physics</h4>
-            <ul>
-                <li>
-                    Overall GPA: 3.7/4.0
-                </li>
-                <li>
-                    Awards: Dean's Honor (L&S) in Winter 2021
-                </li>
-            </ul>
+          <h3>
+            <b
+              >University of California - Santa Barbara: College of Letters and
+              Science</b
+            >
+          </h3>
+          <span class="education-date"
+            >Santa Barbara, CA: Sep 2018 - Dec 2021</span
+          >
+          <h4>Bachelor of Science in Physics</h4>
+          <ul>
+            <li>Overall GPA: 3.7/4.0</li>
+            <li>Awards: Dean's Honor (L&S) in Winter 2021</li>
+          </ul>
         </div>
         <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
+      </div>
+      <!-- End #education -->
 
-    <div id="projects" class="background-alt">
+      <div id="projects" class="background-alt">
         <h2 class="heading"><b>PERSONAL PROJECTS</b></h2>
         <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/all.gif" width="500" height="300" alt="Animated preview of JavaScript and React web application series" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>JavaScript & React web application series</b></h3>
-                        <h4>Independent Projects</h4>
-                        <ul>
-                        <li>
-                            Link to the GitHub repository for all of the code: <a href="https://github.com/Yutao-Zhou/JaveScript-Apps">Click Here</a>.
-                        </li>
-                        <li>
-                            A fancy Weather App that can change units by clicking on the temperature. The background also changes with the weather and includes user-location and search functions. Built with pure JavaScript, CSS, and HTML. Link to the web application: <a href="https://yutao-zhou.github.io/JaveScript-Apps/html/weather.html">Weather App</a>.
-                        </li>
-                        <li>
-                            This is a Todo App that stores a to-do list in local storage. It includes detailed animations and interactions. Built with pure JavaScript, CSS, and HTML. Link to the web application: <a href="https://yutao-zhou.github.io/JaveScript-Apps/html/todo.html">Todo App</a>.
-                        </li>
-                        <li>
-                            This is an online calculator built with React. Link to the web application: <a href="https://yutao-zhou.github.io/calculator/">Calculator App</a>.
-                        </li>
-                        <li>
-                            This is a countdown app built with pure JavaScript, CSS, and HTML. Link to the web application: <a href="https://yutao-zhou.github.io/JaveScript-Apps/index.html">Count Down App</a>.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/keyPhrase.gif" width="500" height="300" alt="Animated preview of key phrase extraction NLP comparison web app" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>NLP Model's Comparison in Key Phrase Extraction Web Application</b></h3>
-                        <h4>Collaborative Project</h4>
-                        <ul>
-                        <li>
-                            Highlights the outputs of different supervised, unsupervised, and BERT-unsupervised ML models for key-phrase extraction in the business domain. Includes adjustable settings with customized natural language input. Total runtime is generally under 1 second.
-                        </li> 
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/usedCar.gif" width="500" height="300" alt="Animated preview of used car data visualization web application" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Used Car Data Visualization Web Application</b></h3>
-                        <h4>Independent Projects</h4>
-                        <ul>
-                        <li>
-                            Link to GitHub repository for all of the code:<a href="https://github.com/Yutao-Zhou/Used_Car_Analysis">Click Here</a>.
-                        </li>
-                        <li>
-                            Built with Streamlit, handling large datasets (365K data points) with Dask, Pandas, and NumPy for data filtering and cached data.
-                        </li>                
-                        <li>
-                            Visualized data with scatter plots on a heat map (with more than 100 selectable base maps), pie charts, and scatter plots with trend lines using packages such as Plotly, Leafmap, and Pydeck.
-                        </li>
-                        <li>
-                            Added a VIN lookup function using GET requests to the NHTSA (National Highway Traffic Safety Administration) API.
-                        </li>
-                        <li>
-                             Designed AI key-phrase extraction from listing descriptions with spaCy and visualization with a word cloud based on VIN query results (VIN query, key-phrase generation, and word-cloud generation usually take about 2 seconds and should take less than 5 seconds).
-                        </li>
-                        <li>
-                            Implemented geocoding and data filtering based on user-input distance from the query location using a geocoder in GeoPy (the entire query typically takes less than 0.5 seconds and should take less than 3 seconds depending on settings).
-                        </li>
-                        <li>
-                             Added a login page with cookies. Hosted the web application on a personal server with domain redirection (stopped hosting because of budget constraints).
-                        </li>
-                        <li>
-                            Tested the Google Maps API with `requests` for geocoding, but abandoned it due to cost ($5 per 1,000 queries).
-                        </li>
-                        <li>
-                            Deployed the website to Google Cloud Platform with Docker and YAML files, but abandoned it due to the daily outgoing internet traffic limit for App Engine on the free account.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+          <div class="row">
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/all.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of JavaScript and React web application series"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>JavaScript & React web application series</b></h3>
+                <h4>Independent Projects</h4>
+                <ul>
+                  <li>
+                    Link to the GitHub repository for all of the code:
+                    <a href="https://github.com/Yutao-Zhou/JaveScript-Apps"
+                      >Click Here</a
+                    >.
+                  </li>
+                  <li>
+                    A fancy Weather App that can change units by clicking on the
+                    temperature. The background also changes with the weather
+                    and includes user-location and search functions. Built with
+                    pure JavaScript, CSS, and HTML. Link to the web application:
+                    <a
+                      href="https://yutao-zhou.github.io/JaveScript-Apps/html/weather.html"
+                      >Weather App</a
+                    >.
+                  </li>
+                  <li>
+                    This is a Todo App that stores a to-do list in local
+                    storage. It includes detailed animations and interactions.
+                    Built with pure JavaScript, CSS, and HTML. Link to the web
+                    application:
+                    <a
+                      href="https://yutao-zhou.github.io/JaveScript-Apps/html/todo.html"
+                      >Todo App</a
+                    >.
+                  </li>
+                  <li>
+                    This is an online calculator built with React. Link to the
+                    web application:
+                    <a href="https://yutao-zhou.github.io/calculator/"
+                      >Calculator App</a
+                    >.
+                  </li>
+                  <li>
+                    This is a countdown app built with pure JavaScript, CSS, and
+                    HTML. Link to the web application:
+                    <a
+                      href="https://yutao-zhou.github.io/JaveScript-Apps/index.html"
+                      >Count Down App</a
+                    >.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
             </div>
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/keyPhrase.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of key phrase extraction NLP comparison web app"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3>
+                  <b
+                    >NLP Model's Comparison in Key Phrase Extraction Web
+                    Application</b
+                  >
+                </h3>
+                <h4>Collaborative Project</h4>
+                <ul>
+                  <li>
+                    Highlights the outputs of different supervised,
+                    unsupervised, and BERT-unsupervised ML models for key-phrase
+                    extraction in the business domain. Includes adjustable
+                    settings with customized natural language input. Total
+                    runtime is generally under 1 second.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/usedCar.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of used car data visualization web application"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>Used Car Data Visualization Web Application</b></h3>
+                <h4>Independent Projects</h4>
+                <ul>
+                  <li>
+                    Link to GitHub repository for all of the code:<a
+                      href="https://github.com/Yutao-Zhou/Used_Car_Analysis"
+                      >Click Here</a
+                    >.
+                  </li>
+                  <li>
+                    Built with Streamlit, handling large datasets (365K data
+                    points) with Dask, Pandas, and NumPy for data filtering and
+                    cached data.
+                  </li>
+                  <li>
+                    Visualized data with scatter plots on a heat map (with more
+                    than 100 selectable base maps), pie charts, and scatter
+                    plots with trend lines using packages such as Plotly,
+                    Leafmap, and Pydeck.
+                  </li>
+                  <li>
+                    Added a VIN lookup function using GET requests to the NHTSA
+                    (National Highway Traffic Safety Administration) API.
+                  </li>
+                  <li>
+                    Designed AI key-phrase extraction from listing descriptions
+                    with spaCy and visualization with a word cloud based on VIN
+                    query results (VIN query, key-phrase generation, and
+                    word-cloud generation usually take about 2 seconds and
+                    should take less than 5 seconds).
+                  </li>
+                  <li>
+                    Implemented geocoding and data filtering based on user-input
+                    distance from the query location using a geocoder in GeoPy
+                    (the entire query typically takes less than 0.5 seconds and
+                    should take less than 3 seconds depending on settings).
+                  </li>
+                  <li>
+                    Added a login page with cookies. Hosted the web application
+                    on a personal server with domain redirection (stopped
+                    hosting because of budget constraints).
+                  </li>
+                  <li>
+                    Tested the Google Maps API with `requests` for geocoding,
+                    but abandoned it due to cost ($5 per 1,000 queries).
+                  </li>
+                  <li>
+                    Deployed the website to Google Cloud Platform with Docker
+                    and YAML files, but abandoned it due to the daily outgoing
+                    internet traffic limit for App Engine on the free account.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+          </div>
         </div>
-    </div>
-    <!-- End #projects -->
+      </div>
+      <!-- End #projects -->
 
-    <div id="academic-projects" class="background-alt">
+      <div id="academic-projects" class="background-alt">
         <h2 class="heading"><b>ACADEMIC PROJECTS</b></h2>
         <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/CICD.png" width="500" height="300" alt="Concert Buddy architecture and interface screenshot" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Concert Buddy</b></h3>
-                        <h4>Course Project: COMS 6156 Cloud Computing</h4>
-                        <ul>
-                        <li>
-                            Implemented a microservice architecture in which each microservice is a REST API that supports CRUD.
-                        </li>
-                        <li>
-                            Utilized Spring Boot in Java to develop the Concert Microservice deployed on Google App Engine, integrating PostgreSQL hosted on GCP Cloud SQL.
-                        </li>
-                        <li>
-                            Integrated TicketMaster API within the Concert Microservice to synchronize and manage concert information.
-                        </li>
-                        <li>
-                            Implemented Continuous Integration/Continuous Deployment (CI/CD) using GCP Cloud Build, automating build and deployment processes triggered by new commits to the repository.
-                        </li>
-                        <li>
-                            Configured AWS API Gateway and aggregator to route requests across distinct microservices.
-                        </li>
-                        <li>
-                            Employed AWS S3 and CloudFront for Content Delivery Network (CDN), ensuring low-latency delivery of front-end UI websites.
-                        </li>
-                        <li>
-                            Implemented Single Sign-On (SSO) functionality with Google accounts to enhance the user experience.
-                        </li>
-                        <li>
-                            Built a user microservice using Spring Boot, deployed it on EC2 using Docker, and utilized PostgreSQL hosted on AWS RDS.
-                        </li>
-                        <li>
-                            Built a finder microservice with Spring Boot, deployed it on EC2, and employed DynamoDB for data storage.
-                        </li>
-                        <li>
-                            Link to GitHub repository for all of the code: <a href="https://github.com/Yutao-Zhou/Concert_Buddy_All">Click Here</a>.
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/MCAkOsiSVOs?si=MA0G7zxnbfRMKl52">Click Here</a> to see a demo of the project on YouTube.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/nycSubwayAnalysis.gif" width="500" height="300" alt="Animated preview of NYC Subway Traffic Analysis web application" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>NYC Subway Traffic Analysis</b></h3>
-                        <h4>Course Project: ELEN 6889 Large Scale Stream Data Analysis</h4>
-                        <ul>
-                        <li>
-                            Full-stack RESTful web application that displays the entries and exits of each subway station on an interactive map.
-                        </li>
-                        <li>
-                            Wrote frontend JavaScript that lets users choose a time with a slider. Corresponding data is visualized on the map, and a ranking of the top 10 stations by throughput at the selected time is displayed on the side.
-                        </li>
-                        <li>
-                            All data presented in the interactive map are fetched in real time from the backend REST API written with Python Flask.
-                        </li>
-                        <li>
-                            The data was collected from the MTA website in batches and preprocessed with Spark.
-                        </li>
-                        <li>
-                            Link to GitHub repository for all of the code: <a href="https://github.com/Yutao-Zhou/New_York_Subway_Analysis">Click Here</a>.
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/UJwvTxSsdaU">Click Here</a> to see a demo of the project on YouTube.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/mbti.gif" width="500" height="300" alt="Animated preview of MBTI personality analysis and prediction project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>MBTI Personality Analysis and Prediction</b></h3>
-                        <h4>Collaborative Course Project: EECS 6893 Big Data Analysis</h4>
-                        <ul>
-                        <li>
-                            Link to GitHub repository for all of the code: <a href="https://github.com/Yutao-Zhou/EECS_6893_Big_Data_Analytics/tree/main/Finala_Project_Web_Application">Click Here</a>.
-                        </li>
-                        <li>
-                            Created a web application that uses users' tweets to predict their personalities.
-                        </li>
-                        <li>
-                            Trained a machine learning model using the MBTI personality dataset.
-                        </li>
-                        <li>
-                            We used Flask as the backend and HTML/CSS as the frontend. When a user enters a username, we fetch the user's tweets using the Twitter API (Tweepy), process the fetched data, use the pre-trained model to make predictions, and present the corresponding results to the user.
-                        </li>
-                        <li>
-                            For details, please check out my final report <a href="files/EECS6893_Big_Data_Analysis_Final_Report.pdf">here</a>.
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/aFgrYO8kDU4">Click Here</a> to view our final presentation on YouTube.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="gif/videoStreaming.gif" width="500" height="300" alt="Animated preview of adaptive bitrate video streaming project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Adaptive Bitrate Video Streaming</b></h3>
-                        <h4>Individual Course Project: CSEE 4119 Computer Network</h4>
-                        <ul>
-                        <li>
-                            The goal of this project is to enable all users to play video smoothly under changing internet throughput.
-                        </li>
-                        <li>
-                            Created a proxy that listens (as a server) to customer requests (users in a browser), continuously calculates customer throughput, and requests video chunks with a suitable bitrate (as a client) from the video server.
-                        </li>
-                        <li>
-                            Used a TCP welcome socket, connection sockets, and threading to handle multiple users streaming at the same time.
-                        </li>
-                        <li>
-                            Note: The course policy does not allow open-sourcing my code, but I do have all of the code in a private GitHub repository.
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/Vh6L8rUFR2Y">Click Here</a> to see a demo of my proxy on YouTube.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/own_internet.png" width="500" height="300" alt="Network topology diagram for My Own Internet project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>My Own Internet</b></h3>
-                        <h4>Individual Course Project: CSEE 4119 Computer Network</h4>
-                        <ul>
-                        <li>
-                            Configured OSPF and iBGP to connect 8 routers and 6 hosts in my autonomous system.
-                        </li>
-                        <li>
-                            Configured eBGP to perform different routing policies for inter-AS connections with my provider, customer, and peers. For example, achieved no-valley routing and preferred-customer routing (preference order: customer, peer, provider). Performed inbound traffic engineering to prefer traffic from one link of a provider (with multiple links) and to guide traffic to prefer one provider over others.
-                        </li>
-                        <li>
-                            Successfully fetched data across our Internet topology (with working policies) formed with my classmates.
-                        </li>
-                        <li>
-                            Note: The course policy does not allow open source for my code.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/attention.png" width="500" height="300" alt="Visualization from Swin Transformer reimplementation project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Swin Transformer Paper Reimplementation</b></h3>
-                        <h4>Individual Course Project: ECBM 4040 Deep Learning and Neural Network</h4>
-                        <ul>
-                        <li>
-                            Replicated the entire Swin Transformer architecture.
-                        </li>
-                        <li>
-                            Tested my model on CIFAR-100 and achieved an accuracy of 46.7% (I only had access to very limited computational resources, so I could only train on a much smaller dataset than the original paper).
-                        </li>
-                        <li>
-                            For details, please check out my final report <a href="files/E4040_2022Fall_DLNN_report_yz4359.pdf">here</a>.
-                        </li>
-                        <li>
-                            Note: The course policy does not allow open-sourcing my code, but I do have all of the code in a private GitHub repository.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/cu.png" width="500" height="300" alt="Columbia University project placeholder image for GraphQL API project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>GraphQL API for OpenSea Smart Contract</b></h3>
-                        <h4>Course Project: ELEN 6883 Blockchain Technology</h4>
-                        <ul>
-                        <li>
-                            Wrote a Subgraph (a GraphQL API) that enables users to interact with the OpenSea smart contract without needing to understand the technical details under the hood.
-                        </li>
-                        <li>
-                            Users could query information, listings, transfers, and bids for NFTs on the OpenSea smart contract using GraphQL query syntax.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/cu.png" width="500" height="300" alt="Columbia University project placeholder image for scientific computing labs" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Introduction to Scientific Computing Laboratories</b></h3>
-                        <h4>PHYS 129L Course Projects</h4>
-                        <ul>
-                        <li>
-                            Used Python for string processing, error handling, inheritance, and deriving the Julian Day based on the input.
-                        </li>
-                        <li>
-                            Calculated the complex plane, drew a fractal image, and plotted a 3D image of a rotatable Airy disk.
-                        </li>
-                        <li>
-                            Practiced the Discrete Fourier Transform, Fourier analysis algorithms, and drawing methods.
-                        </li>
-                        <li>
-                            Practiced Gaussian approximations, integration algorithms, and Monte Carlo simulation.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/cu.png" width="500" height="300" alt="Columbia University project placeholder image for auroral morphology clustering project" loading="lazy" decoding="async"/>
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><b>Auroral Morphology Classification Based on Unsupervised Clustering</b></h3>
-                        <h4>Advisor: Prof. Ziming Zou (National Space Science Center, CAS)</h4>
-                        <ul>
-                        <li>
-                            Familiarized myself with the principles of unsupervised clustering algorithms and the process details of the KNN and K-means algorithms.
-                        </li>
-                        <li>
-                            Learned how to call underlying algorithms in the scikit-learn machine learning library.
-                        </li>
-                        <li>
-                            Consulted literature on morphological categories of aurora observation images in all-sky imaging and collected data sources of aurora images.
-                        </li>
-                        <li>
-                            Programmed an unsupervised morphological clustering pipeline for aurora images.
-                        </li>
-                        </ul>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
+          <div class="row">
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/CICD.png"
+                  width="500"
+                  height="300"
+                  alt="Concert Buddy architecture and interface screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>Concert Buddy</b></h3>
+                <h4>Course Project: COMS 6156 Cloud Computing</h4>
+                <ul>
+                  <li>
+                    Implemented a microservice architecture in which each
+                    microservice is a REST API that supports CRUD.
+                  </li>
+                  <li>
+                    Utilized Spring Boot in Java to develop the Concert
+                    Microservice deployed on Google App Engine, integrating
+                    PostgreSQL hosted on GCP Cloud SQL.
+                  </li>
+                  <li>
+                    Integrated TicketMaster API within the Concert Microservice
+                    to synchronize and manage concert information.
+                  </li>
+                  <li>
+                    Implemented Continuous Integration/Continuous Deployment
+                    (CI/CD) using GCP Cloud Build, automating build and
+                    deployment processes triggered by new commits to the
+                    repository.
+                  </li>
+                  <li>
+                    Configured AWS API Gateway and aggregator to route requests
+                    across distinct microservices.
+                  </li>
+                  <li>
+                    Employed AWS S3 and CloudFront for Content Delivery Network
+                    (CDN), ensuring low-latency delivery of front-end UI
+                    websites.
+                  </li>
+                  <li>
+                    Implemented Single Sign-On (SSO) functionality with Google
+                    accounts to enhance the user experience.
+                  </li>
+                  <li>
+                    Built a user microservice using Spring Boot, deployed it on
+                    EC2 using Docker, and utilized PostgreSQL hosted on AWS RDS.
+                  </li>
+                  <li>
+                    Built a finder microservice with Spring Boot, deployed it on
+                    EC2, and employed DynamoDB for data storage.
+                  </li>
+                  <li>
+                    Link to GitHub repository for all of the code:
+                    <a href="https://github.com/Yutao-Zhou/Concert_Buddy_All"
+                      >Click Here</a
+                    >.
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/MCAkOsiSVOs?si=MA0G7zxnbfRMKl52"
+                      >Click Here</a
+                    >
+                    to see a demo of the project on YouTube.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
             </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/nycSubwayAnalysis.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of NYC Subway Traffic Analysis web application"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>NYC Subway Traffic Analysis</b></h3>
+                <h4>
+                  Course Project: ELEN 6889 Large Scale Stream Data Analysis
+                </h4>
+                <ul>
+                  <li>
+                    Full-stack RESTful web application that displays the entries
+                    and exits of each subway station on an interactive map.
+                  </li>
+                  <li>
+                    Wrote frontend JavaScript that lets users choose a time with
+                    a slider. Corresponding data is visualized on the map, and a
+                    ranking of the top 10 stations by throughput at the selected
+                    time is displayed on the side.
+                  </li>
+                  <li>
+                    All data presented in the interactive map are fetched in
+                    real time from the backend REST API written with Python
+                    Flask.
+                  </li>
+                  <li>
+                    The data was collected from the MTA website in batches and
+                    preprocessed with Spark.
+                  </li>
+                  <li>
+                    Link to GitHub repository for all of the code:
+                    <a
+                      href="https://github.com/Yutao-Zhou/New_York_Subway_Analysis"
+                      >Click Here</a
+                    >.
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/UJwvTxSsdaU">Click Here</a> to see
+                    a demo of the project on YouTube.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/mbti.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of MBTI personality analysis and prediction project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>MBTI Personality Analysis and Prediction</b></h3>
+                <h4>
+                  Collaborative Course Project: EECS 6893 Big Data Analysis
+                </h4>
+                <ul>
+                  <li>
+                    Link to GitHub repository for all of the code:
+                    <a
+                      href="https://github.com/Yutao-Zhou/EECS_6893_Big_Data_Analytics/tree/main/Finala_Project_Web_Application"
+                      >Click Here</a
+                    >.
+                  </li>
+                  <li>
+                    Created a web application that uses users' tweets to predict
+                    their personalities.
+                  </li>
+                  <li>
+                    Trained a machine learning model using the MBTI personality
+                    dataset.
+                  </li>
+                  <li>
+                    We used Flask as the backend and HTML/CSS as the frontend.
+                    When a user enters a username, we fetch the user's tweets
+                    using the Twitter API (Tweepy), process the fetched data,
+                    use the pre-trained model to make predictions, and present
+                    the corresponding results to the user.
+                  </li>
+                  <li>
+                    For details, please check out my final report
+                    <a href="files/EECS6893_Big_Data_Analysis_Final_Report.pdf"
+                      >here</a
+                    >.
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/aFgrYO8kDU4">Click Here</a> to
+                    view our final presentation on YouTube.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="gif/videoStreaming.gif"
+                  width="500"
+                  height="300"
+                  alt="Animated preview of adaptive bitrate video streaming project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>Adaptive Bitrate Video Streaming</b></h3>
+                <h4>Individual Course Project: CSEE 4119 Computer Network</h4>
+                <ul>
+                  <li>
+                    The goal of this project is to enable all users to play
+                    video smoothly under changing internet throughput.
+                  </li>
+                  <li>
+                    Created a proxy that listens (as a server) to customer
+                    requests (users in a browser), continuously calculates
+                    customer throughput, and requests video chunks with a
+                    suitable bitrate (as a client) from the video server.
+                  </li>
+                  <li>
+                    Used a TCP welcome socket, connection sockets, and threading
+                    to handle multiple users streaming at the same time.
+                  </li>
+                  <li>
+                    Note: The course policy does not allow open-sourcing my
+                    code, but I do have all of the code in a private GitHub
+                    repository.
+                  </li>
+                  <li>
+                    <a href="https://youtu.be/Vh6L8rUFR2Y">Click Here</a> to see
+                    a demo of my proxy on YouTube.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/own_internet.png"
+                  width="500"
+                  height="300"
+                  alt="Network topology diagram for My Own Internet project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>My Own Internet</b></h3>
+                <h4>Individual Course Project: CSEE 4119 Computer Network</h4>
+                <ul>
+                  <li>
+                    Configured OSPF and iBGP to connect 8 routers and 6 hosts in
+                    my autonomous system.
+                  </li>
+                  <li>
+                    Configured eBGP to perform different routing policies for
+                    inter-AS connections with my provider, customer, and peers.
+                    For example, achieved no-valley routing and
+                    preferred-customer routing (preference order: customer,
+                    peer, provider). Performed inbound traffic engineering to
+                    prefer traffic from one link of a provider (with multiple
+                    links) and to guide traffic to prefer one provider over
+                    others.
+                  </li>
+                  <li>
+                    Successfully fetched data across our Internet topology (with
+                    working policies) formed with my classmates.
+                  </li>
+                  <li>
+                    Note: The course policy does not allow open source for my
+                    code.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/attention.png"
+                  width="500"
+                  height="300"
+                  alt="Visualization from Swin Transformer reimplementation project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>Swin Transformer Paper Reimplementation</b></h3>
+                <h4>
+                  Individual Course Project: ECBM 4040 Deep Learning and Neural
+                  Network
+                </h4>
+                <ul>
+                  <li>Replicated the entire Swin Transformer architecture.</li>
+                  <li>
+                    Tested my model on CIFAR-100 and achieved an accuracy of
+                    46.7% (I only had access to very limited computational
+                    resources, so I could only train on a much smaller dataset
+                    than the original paper).
+                  </li>
+                  <li>
+                    For details, please check out my final report
+                    <a href="files/E4040_2022Fall_DLNN_report_yz4359.pdf"
+                      >here</a
+                    >.
+                  </li>
+                  <li>
+                    Note: The course policy does not allow open-sourcing my
+                    code, but I do have all of the code in a private GitHub
+                    repository.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/cu.png"
+                  width="500"
+                  height="300"
+                  alt="Columbia University project placeholder image for GraphQL API project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3><b>GraphQL API for OpenSea Smart Contract</b></h3>
+                <h4>Course Project: ELEN 6883 Blockchain Technology</h4>
+                <ul>
+                  <li>
+                    Wrote a Subgraph (a GraphQL API) that enables users to
+                    interact with the OpenSea smart contract without needing to
+                    understand the technical details under the hood.
+                  </li>
+                  <li>
+                    Users could query information, listings, transfers, and bids
+                    for NFTs on the OpenSea smart contract using GraphQL query
+                    syntax.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/cu.png"
+                  width="500"
+                  height="300"
+                  alt="Columbia University project placeholder image for scientific computing labs"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3>
+                  <b>Introduction to Scientific Computing Laboratories</b>
+                </h3>
+                <h4>PHYS 129L Course Projects</h4>
+                <ul>
+                  <li>
+                    Used Python for string processing, error handling,
+                    inheritance, and deriving the Julian Day based on the input.
+                  </li>
+                  <li>
+                    Calculated the complex plane, drew a fractal image, and
+                    plotted a 3D image of a rotatable Airy disk.
+                  </li>
+                  <li>
+                    Practiced the Discrete Fourier Transform, Fourier analysis
+                    algorithms, and drawing methods.
+                  </li>
+                  <li>
+                    Practiced Gaussian approximations, integration algorithms,
+                    and Monte Carlo simulation.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+            <div class="project shadow-large">
+              <div class="project-image">
+                <img
+                  src="images/cu.png"
+                  width="500"
+                  height="300"
+                  alt="Columbia University project placeholder image for auroral morphology clustering project"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <!-- End .project-image -->
+              <div class="project-info">
+                <h3>
+                  <b
+                    >Auroral Morphology Classification Based on Unsupervised
+                    Clustering</b
+                  >
+                </h3>
+                <h4>
+                  Advisor: Prof. Ziming Zou (National Space Science Center, CAS)
+                </h4>
+                <ul>
+                  <li>
+                    Familiarized myself with the principles of unsupervised
+                    clustering algorithms and the process details of the KNN and
+                    K-means algorithms.
+                  </li>
+                  <li>
+                    Learned how to call underlying algorithms in the
+                    scikit-learn machine learning library.
+                  </li>
+                  <li>
+                    Consulted literature on morphological categories of aurora
+                    observation images in all-sky imaging and collected data
+                    sources of aurora images.
+                  </li>
+                  <li>
+                    Programmed an unsupervised morphological clustering pipeline
+                    for aurora images.
+                  </li>
+                </ul>
+              </div>
+              <!-- End .project-info -->
+            </div>
+            <!-- End .project -->
+          </div>
         </div>
-    </div>
-    <!-- End #projects -->
-    <div id="contact">
+      </div>
+      <!-- End #projects -->
+      <div id="contact">
         <h2><b>Get in Touch</b></h2>
         <ul class="contact-list" aria-label="Contact details">
-            <li><strong>Email:</strong> <a href="mailto:yutaozhoucolumbia@gmail.com">yutaozhoucolumbia@gmail.com</a></li>
-            <li><strong>Tel:</strong> <a href="tel:+18056371617">+1 805-637-1617</a></li>
-            <li><strong>School Email:</strong> <a href="mailto:yz4359@columbia.edu">yz4359@columbia.edu</a></li>
-            <li><strong>Tel:</strong> <a href="tel:+8613520759678">+86 13520759678</a></li>
-            <li><strong>Address:</strong> Santa Clara, CA 95051</li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:yutaozhoucolumbia@gmail.com"
+              >yutaozhoucolumbia@gmail.com</a
+            >
+          </li>
+          <li>
+            <strong>Tel:</strong> <a href="tel:+18056371617">+1 805-637-1617</a>
+          </li>
+          <li>
+            <strong>School Email:</strong>
+            <a href="mailto:yz4359@columbia.edu">yz4359@columbia.edu</a>
+          </li>
+          <li>
+            <strong>Tel:</strong>
+            <a href="tel:+8613520759678">+86 13520759678</a>
+          </li>
+          <li><strong>Address:</strong> Santa Clara, CA 95051</li>
         </ul>
-        <br>
+        <br />
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/xoqyrzne">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <label class="sr-only" for="contact-email">Your email</label>
-                <input id="contact-email" type="email" name="_replyto" placeholder="Your email" autocomplete="email" required>
-                <label class="sr-only" for="contact-message">Your message</label>
-                <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
-                <button type="submit"><b>Send</b></button>
-            </form>
+          <form method="POST" action="https://formspree.io/f/xoqyrzne">
+            <input
+              type="hidden"
+              name="_subject"
+              value="Contact request from personal website"
+            />
+            <label class="sr-only" for="contact-email">Your email</label>
+            <input
+              id="contact-email"
+              type="email"
+              name="_replyto"
+              placeholder="Your email"
+              autocomplete="email"
+              required
+            />
+            <label class="sr-only" for="contact-message">Your message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
+            <button type="submit"><b>Send</b></button>
+          </form>
         </div>
         <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
+      </div>
+      <!-- End #contact -->
     </main>
     <!-- End #main-content -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2026 Yutao Zhou. All rights reserved.
-                        <br>Most images, all files, and all GIFs on this site are owned by me. I reserve the copyright to all content on this website. Please contact me before using any content.
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <a href="#main-content" aria-label="Back to top">
-                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                        </a>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Yutao-Zhou" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://leetcode.com/YutaoZhou/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile"><span class="iconify" aria-hidden="true" data-icon="simple-icons:leetcode" data-width="16" data-height="16"></span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/yutao-zhou" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/yutao.zhou.3" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/yutao_zhou_cu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 copyright">
+            <p>
+              Copyright &copy; 2026 Yutao Zhou. All rights reserved.
+              <br />Most images, all files, and all GIFs on this site are owned
+              by me. I reserve the copyright to all content on this website.
+              Please contact me before using any content.
+            </p>
+          </div>
+          <div class="col-sm-2 top">
+            <span id="to-top">
+              <a href="#main-content" aria-label="Back to top">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+              </a>
+            </span>
+          </div>
+          <div class="col-sm-5 social">
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/Yutao-Zhou"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://leetcode.com/YutaoZhou/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode profile"
+                  ><span
+                    class="iconify"
+                    aria-hidden="true"
+                    data-icon="simple-icons:leetcode"
+                    data-width="16"
+                    data-height="16"
+                  ></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/yutao-zhou"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/yutao.zhou.3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook profile"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/yutao_zhou_cu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram profile"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- End footer -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
-</body>
+  </body>
 </html>
