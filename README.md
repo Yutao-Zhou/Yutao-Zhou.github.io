@@ -4,6 +4,8 @@ Personal website at [yutaozhou.com](https://yutaozhou.com/), published from the 
 
 The homepage is a buildless static page. Edit `index.html`, `css/portfolio.css`, and `js/portfolio.js` directly. Existing project assets and downloadable reports remain in `images/`, `gif/`, and `files/`.
 
+When changing the stylesheet, update its `?v=` cache key in `index.html` to the first 12 characters of the stylesheet's SHA-256 hash. This keeps cached CSS aligned with the current page markup.
+
 ## Appearance and content
 
 - Light mode uses a blue and white palette. Dark mode uses charcoal and lime.
