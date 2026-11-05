@@ -168,6 +168,7 @@ details[id] {
 }
 .site-nav a {
   padding-block: 9px;
+  white-space: nowrap;
 }
 .site-nav a:hover,
 .footer-links a:hover,
@@ -270,6 +271,15 @@ details[id] {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+}
+.button-secondary {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.button-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 .button svg,
 .text-link svg {
@@ -609,29 +619,10 @@ summary::-webkit-details-marker {
 }
 .experience-lead {
   display: grid;
-  grid-template-columns: 70px 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: start;
   gap: 26px;
   padding: 7px 0 29px;
-}
-.company-mark {
-  font-weight: 800;
-  font-size: 27px;
-  letter-spacing: -1.5px;
-  border-right: 1px solid var(--line);
-  line-height: 1.2;
-  padding: 4px 20px 17px 0;
-  position: relative;
-}
-.company-mark::after {
-  content: '';
-  position: absolute;
-  width: 35px;
-  height: 9px;
-  border-bottom: 2px solid var(--accent);
-  border-radius: 0 0 70% 70%;
-  top: 30px;
-  left: 1px;
 }
 .experience-lead h3 {
   font-size: 21px;
@@ -642,6 +633,11 @@ summary::-webkit-details-marker {
 .experience-lead .role {
   font-size: 13px;
   margin-top: 4px;
+}
+.career-progression {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 9px;
 }
 .experience-lead .description {
   max-width: 650px;
@@ -654,6 +650,12 @@ summary::-webkit-details-marker {
   font-size: 10px;
   padding-top: 7px;
   white-space: nowrap;
+}
+.tenure-note {
+  display: block;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
 }
 .role-disclosure > summary {
   align-items: flex-start;
@@ -749,6 +751,12 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
+}
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 .contact-heading h2 {
   font-size: clamp(27px, 3.4vw, 41px);
@@ -869,10 +877,10 @@ summary::-webkit-details-marker {
     width: calc(100% - 56px);
   }
   .header-inner {
-    gap: 20px;
+    gap: 14px;
   }
   .site-nav {
-    gap: 18px;
+    gap: 14px;
   }
   .hero {
     gap: 15px;
@@ -1067,17 +1075,9 @@ summary::-webkit-details-marker {
     margin-top: 47px;
   }
   .experience-lead {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 1fr;
     gap: 19px;
     padding-bottom: 22px;
-  }
-  .company-mark {
-    font-size: 23px;
-    padding-right: 12px;
-  }
-  .company-mark::after {
-    width: 29px;
-    top: 27px;
   }
   .experience-lead h3 {
     font-size: 18px;
@@ -1086,7 +1086,7 @@ summary::-webkit-details-marker {
     font-size: 12px;
   }
   .experience-lead > .role-date {
-    grid-column: 2;
+    grid-column: 1;
     padding-top: 0;
     margin-top: -10px;
   }
