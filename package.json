@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "gulp watch",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:analytics": "node --test tests/site-analytics.test.cjs"
   },
   "keywords": [
     "portfolio",
