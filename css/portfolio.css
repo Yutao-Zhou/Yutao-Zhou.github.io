@@ -391,6 +391,9 @@ details[id] {
   flex-direction: column;
   align-items: flex-start;
 }
+.feature-project + .feature-project {
+  margin-top: 24px;
+}
 .feature-copy h3 {
   font-size: 43px;
   line-height: 1.2;
