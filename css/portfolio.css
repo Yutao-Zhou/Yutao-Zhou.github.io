@@ -213,11 +213,6 @@ details[id] {
 .nav-toggle {
   display: none;
 }
-.resume-link {
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 7px 12px !important;
-}
 .hero {
   padding: 84px 0 82px;
   display: grid;
@@ -484,8 +479,8 @@ details[id] {
 }
 .project-title > a {
   color: var(--accent);
-  font-size: 22px;
-  line-height: 1.2;
+  font-size: 11px;
+  line-height: 1.8;
 }
 .project-card > p {
   color: var(--muted);
@@ -1080,10 +1075,6 @@ summary::-webkit-details-marker {
   }
   .js .site-nav[data-open='true'] {
     display: flex;
-  }
-  .site-nav .resume-link {
-    align-self: flex-start;
-    margin-top: 6px;
   }
   .hero {
     padding: 46px 0 43px;
