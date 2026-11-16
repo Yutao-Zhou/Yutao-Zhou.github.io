@@ -725,6 +725,75 @@ summary::-webkit-details-marker {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 9px;
 }
+.credentials {
+  margin-top: 40px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.credentials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.credentials-header h3 {
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+}
+.credentials-description {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.credentials-header > a,
+.credential-link {
+  color: var(--accent);
+  font-size: 11px;
+}
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.credential-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+.credential-preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+.credential-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.credential-card h4 {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.credential-meta {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+@media (max-width: 759px) {
+  .credential-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
 .toolkit {
   margin-top: 30px;
   border-top: 1px solid var(--line);
