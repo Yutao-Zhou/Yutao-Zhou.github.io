@@ -1,6 +1,6 @@
 # Project analytics
 
-All projects use one Umami Cloud website (`yutaozhou.com`). The shared script is
+The public project sites on `yutaozhou.com` use one Umami Cloud website. The shared script is
 `https://yutaozhou.com/js/site-analytics.js`; each HTML entry specifies its stable
 `data-project` value. New projects must include this script explicitly.
 
@@ -39,12 +39,13 @@ The shared loader observes rendered DOM markers, so it also handles delayed
 application loading without requiring a loaded analytics global in each app.
 Repeated React rendering and language changes do not create duplicate view events.
 
-Use [analytics preferences](https://yutaozhou.com/analytics-settings.html) to exclude
-your browser across all projects. Refresh already open pages after changing the
-preference. Each browser/device needs its own setting. DNT and GPC are honored.
-New events begin at deployment; past clicks and review visits cannot be recovered.
-QA visits appear in the live data. All projects and custom events share the plan's
-event allowance.
+The shared script adds a copyright notice, a project-specific disclaimer, and
+links to the privacy notice and analytics preferences. Umami and the event
+observers start after explicit consent. The versioned preference is saved locally
+for this site origin. Declining clears pending events. Withdrawal stops collection
+on the current page and other open tabs. The loader honors DNT, GPC, and existing
+opt-outs. The privacy and preference pages do not load Umami. See [privacy and
+data use](https://yutaozhou.com/privacy.html) and [analytics preferences](https://yutaozhou.com/analytics-settings.html).
 
 ## Maintenance
 

@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="css/portfolio.css?v=e99d72270947" />
     <script src="js/portfolio.js" defer></script>
     <title>Yutao Zhou — AI-native Engineer &amp; Builder</title>
-    <script defer src="https://yutaozhou.com/js/site-analytics.js" data-project="portfolio"></script>
+    <script defer src="/js/site-analytics.js" data-project="portfolio" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -2016,7 +2016,8 @@
                 placeholder="Tell me what you have in mind..."
                 required
               ></textarea
-              ><button class="button" type="submit">
+              ><label><input type="checkbox" required style="display:inline-block;width:auto;margin-right:.5em">I agree to send my email address and message through Formspree so Yutao Zhou can respond. <a href="/privacy.html">Privacy &amp; data use</a></label>
+              <button class="button" type="submit">
                 Send message
                 <svg
                   viewBox="0 0 24 24"
@@ -2035,19 +2036,18 @@
     </main>
     <footer class="site-footer container">
       <div class="footer-inner">
-        <p>© <span data-year>2026</span> Yutao Zhou</p>
         <div class="footer-links">
           <a href="https://github.com/Yutao-Zhou">GitHub</a
           ><a href="https://www.linkedin.com/in/yutao-zhou">LinkedIn</a
           ><a href="legacy.html">Previous version ↗</a
-          ><a href="analytics-settings.html">Analytics preferences</a
           ><a href="#main-content">Back to top ↑</a>
         </div>
       </div>
-      <p class="copyright-note">
-        All rights reserved. Please contact me before using original content,
-        images, or files.
-      </p>
+      <section id="yz-site-policy" aria-label="Site notices">
+        <p>© 2026 Yutao Zhou. Rights in third-party materials remain with their owners.</p>
+        <p>This is a personal site. Views are my own, and project or résumé information may change.</p>
+        <a href="/privacy.html">Privacy &amp; data use</a> · <a href="/analytics-settings.html">Analytics preferences</a>
+      </section>
     </footer>
   </body>
 </html>

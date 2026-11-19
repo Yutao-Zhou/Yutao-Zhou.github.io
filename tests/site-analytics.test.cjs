@@ -11,6 +11,7 @@ function setup(options={}) {
  if(options.project){const boot=w.document.createElement('script');boot.dataset.project=options.project;w.document.head.appendChild(boot);Object.defineProperty(w.document,'currentScript',{value:boot});}
  const NativeObserver=w.MutationObserver;
  w.MutationObserver=class extends NativeObserver { constructor(callback){super(callback);observers.push(this);} };
+ if(options.consent !== false)w.localStorage.setItem('yz.analytics-consent.v1','allow');
  if(options.exclude)w.localStorage.setItem('umami.disabled','1');
  if(options.gpc)Object.defineProperty(w.navigator,'globalPrivacyControl',{value:true});
  if(options.storageBlocked)Object.defineProperty(w,'localStorage',{get(){throw new Error('Storage disabled');}});
@@ -23,6 +24,32 @@ function setup(options={}) {
  return {w,sent,capture,close:()=>{observers.forEach(observer=>observer.disconnect());w.close();},advance:ms=>{time+=ms;for(const fn of [...timers])fn();},visibility:value=>{visible=value;w.document.dispatchEvent(new w.Event('visibilitychange'));}};
 }
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('first visit is off, explicit consent starts tracking and withdrawal stops it', async () => {
+ const s=setup({consent:false});
+ const doc=s.w.document;
+ const panel=doc.getElementById('yz-privacy-panel');
+ assert.equal(panel.hidden,false);
+ assert.equal(doc.querySelector('script[src="https://cloud.umami.is/script.js"]'),null);
+ assert.equal(s.sent.length,0);
+ panel.querySelector('button:nth-of-type(2)').click();
+ assert.equal(s.w.localStorage.getItem('yz.analytics-consent.v1'),'deny');
+ assert.equal(panel.hidden,true);
+ assert.equal(s.w.yzAnalytics.enabled,false);
+ doc.querySelector('#yz-site-policy a[href="/analytics-settings.html"]').click();
+ panel.querySelector('button:first-of-type').click();
+ assert.equal(s.w.localStorage.getItem('yz.analytics-consent.v1'),'allow');
+ assert.equal(s.sent.filter(event=>event.name==='report_read').length,1);
+ assert.ok(doc.querySelector('script[src="https://cloud.umami.is/script.js"]'));
+ s.w.localStorage.setItem('yz.analytics-consent.v1','deny');
+ s.w.dispatchEvent(new s.w.StorageEvent('storage',{key:'yz.analytics-consent.v1',newValue:'deny'}));
+ doc.querySelector('[data-report-date]').dataset.reportDate='2026-11-12';
+ s.advance(60000);
+ await flush();
+ assert.equal(s.w.yzAnalyticsBeforeSend('event', { url: '/finance/' }),false);
+ assert.equal(s.sent.filter(event=>event.name==='report_open').length,1);
+ assert.equal(s.sent.filter(event=>event.name==='report_engaged').length,0);
+ s.close();
+});
 test('one shared website ID, project tag and privacy settings are applied to the tracker',()=>{const s=setup();const script=s.w.document.querySelector('script[src="https://cloud.umami.is/script.js"]');assert.equal(script.dataset.websiteId,'f8cf3636-b17d-4011-92dc-6ae29d0d91a3');assert.equal(script.dataset.tag,'finance');assert.equal(script.dataset.excludeSearch,'true');assert.equal(script.dataset.excludeHash,'true');s.close();});
 for(const options of [{exclude:true},{gpc:true},{storageBlocked:true},{url:'http://localhost:5173/finance/'}])test('excluded, private or development visits do not initialize collection: '+JSON.stringify(options),()=>{const s=setup(options);assert.equal(s.w.document.querySelector('script[src="https://cloud.umami.is/script.js"]'),null);s.w.yzAnalytics.track('report_read',{report_date:'2026-11-11'});assert.equal(s.sent.length,0);s.close();});
 test('mortgage and referrer queries/fragments are removed before transmission',()=>{const s=setup({url:'https://yutaozhou.com/house_shopping/?price=900000#income=100000'});const clean=s.w.yzAnalyticsBeforeSend('event',{url:'/house_shopping/?price=900000#income=100000',referrer:'https://example.test/path?email=private#secret'});assert.equal(clean.url,'/house_shopping/');assert.equal(clean.referrer,'https://example.test/path');s.close();});
